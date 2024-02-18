@@ -52,6 +52,10 @@ table {
   border-spacing: 0;
 }
 
+:root {
+  --main-bg-color: #FFC0CB;
+}
+
 body {
   display: flex;
   flex-direction: column;
@@ -59,7 +63,7 @@ body {
 
 .header {
   min-height: 40vh;
-  background: linear-gradient(171deg, #FFC0CB 60%, #ffffff 40%);
+  background: linear-gradient(171deg, var(--main-bg-color) 60%, #ffffff 40%);
   display: flex;
   justify-content: center;
   padding: 30px;
@@ -67,6 +71,10 @@ body {
 
 .main {
   min-height: 50vh;
+  padding: 100px 10% 100px 10%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
 }
 
 .footer {
@@ -74,12 +82,12 @@ body {
   background-color: red;
 }
 
-.flex-row, .icons {
+.flex-row, .project-header, .icons {
   display: flex;
   align-items: center;
 }
 
-.flex-col {
+.flex-col, .project-contents {
   display: flex;
   flex-direction: column;
 }
@@ -116,4 +124,55 @@ body {
 }
 .icons img {
   max-height: 30px;
+}
+
+.project-container {
+  display: grid;
+  grid-gap: 2rem;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  grid-auto-rows: 1fr;
+  list-style: none;
+  border-radius: 30px;
+}
+
+.project {
+  background-color: #ffffff;
+  color: #fff;
+  border-radius: 30px;
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 3px 10px 3px rgba(0, 0, 0, 0.2);
+}
+
+.screenshot {
+  max-height: 50%;
+  width: auto;
+  height: auto;
+  background-color: var(--main-bg-color);
+  padding-top: 60px;
+  padding-bottom: 60px;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  flex: 1;
+}
+
+.project-text-bold {
+  color: black;
+  font-size: 1.5rem;
+}
+
+.project-text {
+  color: #000000;
+  font-size: 1.2rem;
+  color: rgb(100, 100, 100);
+}
+
+.project-header {
+  justify-content: space-between;
+}
+
+.project-contents {
+  padding: 20px;
+  gap: 10px;
 }/*# sourceMappingURL=style.css.map */

@@ -67,15 +67,34 @@ body {
 
 .main {
     min-height: 50vh;
-    padding: 100px 10% 100px 10%;
+    padding: 50px 10% 50px 10%;
     display: flex;
     flex-direction: column;
     gap: 30px;
 }
 
 .footer {
+    color: rgb(73, 73, 73);
     min-height: 30vh;
-    background-color: red;
+    background-color: var(--main-bg-color);
+    display: flex;
+    justify-content: space-between;
+    .footer-text-container {
+        @extend .flex-col;
+        justify-content: space-evenly;
+    }
+
+    .footer-text-bold {
+        font-size: 3rem;
+    }
+
+    .footer-text {
+        font-size: 1.5rem;
+    }
+
+
+
+    padding: 100px 10% 100px 10%;
 }
 
 .flex-row {
@@ -143,6 +162,29 @@ body {
     flex-direction: column;
     box-shadow: 0 3px 10px 3px rgb(0 0 0 / 0.2);
 
+    .project-text-bold {
+        color: black;
+        font-size: 1.5rem;
+    }
+    
+    .project-text {
+        color:#000000;
+        font-size: 1.2rem;
+        color:rgb(100, 100, 100);
+    
+    }
+
+    .project-header {
+        @extend .flex-row;
+        justify-content: space-between;
+    }
+    
+    .project-contents {
+        @extend .flex-col;
+        padding: 20px;
+        gap:10px;
+    }
+    
 }
 
 .screenshot {
@@ -157,25 +199,22 @@ body {
     flex:1;
 }
 
-.project-text-bold {
-    color: black;
-    font-size: 1.5rem;
+
+.social-icons {
+    @extend .icons;
+    justify-content: start;
+    img {
+        max-height: 40px;
+    }
+    gap: 30px;
 }
 
-.project-text {
-    color:#000000;
-    font-size: 1.2rem;
-    color:rgb(100, 100, 100);
-
+.contact-info {
+    display: flex;
+    gap: 10px;
 }
 
-.project-header {
-    @extend .flex-row;
-    justify-content: space-between;
-}
-
-.project-contents {
-    @extend .flex-col;
-    padding: 20px;
-    gap:10px;
+.footer-image {
+    max-width: 100%;
+    height: auto;
 }

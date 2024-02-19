@@ -202,4 +202,65 @@ body {
 .footer-image {
   max-width: 100%;
   height: auto;
+  margin: 0px;
+}
+
+#mobile-footer-image {
+  display: none;
+  overflow-x: hidden;
+}
+
+@media only screen and (max-width: 425px) {
+  .footer {
+    flex-direction: column;
+  }
+  .header {
+    margin-bottom: 600px;
+    max-height: 600px;
+  }
+  .header .flex-row, .header .icons, .header .project .project-header, .project .header .project-header, .header .social-icons {
+    flex-direction: column;
+    max-height: 300px;
+    gap: 30px;
+    max-width: 100%;
+  }
+  .header .about-me-card {
+    max-width: 80vw;
+    min-height: auto;
+    position: relative;
+    box-shadow: none;
+  }
+  .header .about-me-bold-text {
+    text-align: center;
+  }
+  .header .about-me-text {
+    font-size: 1.3rem;
+  }
+  .header .icons, .header .social-icons {
+    flex-direction: row;
+    justify-content: center;
+  }
+  .footer-text-container {
+    gap: 10px;
+  }
+  .footer {
+    gap: 20px;
+    padding-top: 40px;
+  }
+  .footer .footer-text-bold {
+    text-align: center;
+  }
+  #desktop-footer-image {
+    display: none;
+  }
+  #mobile-footer-image {
+    display: block;
+    max-width: 100%;
+  }
+  .project-container {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+  .social-icons {
+    justify-content: center;
+  }
 }/*# sourceMappingURL=style.css.map */

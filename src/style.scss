@@ -217,4 +217,75 @@ body {
 .footer-image {
     max-width: 100%;
     height: auto;
+    margin: 0px;
+}
+
+#mobile-footer-image {
+    display: none;
+    overflow-x: hidden;
+
+}
+
+@media only screen and (max-width: 425px) {
+    .footer {
+        flex-direction: column;
+    }
+
+    .header {
+        .flex-row {
+            flex-direction: column;
+            max-height: 300px;
+            gap: 30px;
+            max-width: 100%;
+        }
+        .about-me-card {
+            max-width: 80vw;
+            min-height: auto;
+            position: relative;
+            box-shadow: none;
+        }
+
+        .about-me-bold-text {
+            text-align: center;
+        }
+
+        .about-me-text {
+            font-size: 1.3rem;
+        }
+
+        .icons {
+            flex-direction: row;
+            justify-content: center;
+        }
+        margin-bottom: 600px;
+        max-height: 600px;
+    }
+    .footer-text-container {
+        gap: 10px;
+    }
+
+    .footer {
+        gap: 20px;
+        .footer-text-bold {
+            text-align: center;
+        }
+        padding-top: 40px;
+    }
+
+    #desktop-footer-image {
+        display: none;
+    }
+    #mobile-footer-image {
+        display: block;
+        max-width: 100%;
+    }
+    
+    .project-container {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr) ) ;
+
+    }
+
+    .social-icons {
+        justify-content: center;
+    }
 }

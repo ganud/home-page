@@ -49,7 +49,7 @@ table {
 
 // start here
 :root {
-    --main-bg-color: #FFC0CB;
+    --main-bg-color: #dedcff;
 }
 
 body {
@@ -140,6 +140,14 @@ body {
     justify-content: end;
     img {
         max-height: 30px;
+        transition: transform .2s ease-in-out;
+
+    }
+    img:hover {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+        -webkit-transition: transform 0.5s ease;    
+        transition: transform 0.5s ease;
     }
     gap: 10px;
 }
@@ -154,6 +162,7 @@ body {
 }
 
 .project {
+    transition: transform .2s ease-in-out;
     background-color: #ffffff;
     color: #fff;
     border-radius: 30px;
@@ -187,6 +196,9 @@ body {
     
 }
 
+.project:hover {
+    transform: scale(1.05);
+}
 .screenshot {
     max-height:50%;
     width: auto;
@@ -233,8 +245,23 @@ body {
     display: none;
 }
 
+.mugshot-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+}
+.mugshot-text {
+    position: absolute;
+    font-size: 5rem;
+    display: block;
+    z-index: 1001;
+    color: white;
+    bottom: 10px;
+    text-shadow: 1px 1px 2px black;
+}
 
-
+// tablet
 @media only screen and (min-width: 426px) and (max-width: 1024px) {
     .project-container {
         grid-template-columns: repeat(auto-fill, minmax(200px, 1fr) ) ;
@@ -256,6 +283,7 @@ body {
         display: block;
         margin-top: 80px;
         max-width: 80vw;
+        position: relative;
     }
     .about-me-bold-text {
         text-align: center;
@@ -276,6 +304,17 @@ body {
 
     #tablet-container {
         display: block;
+    }
+
+    .mugshot-container {
+        display: block;
+    }
+
+    .mugshot-text {
+        position: absolute;
+        top: -75px;
+        right: 10vw;
+        font-size: 4rem;
     }
 }
 
@@ -348,5 +387,9 @@ body {
 
     .social-icons {
         justify-content: center;
+    }
+
+    .mugshot-text {
+        font-size: 4rem;
     }
 }
